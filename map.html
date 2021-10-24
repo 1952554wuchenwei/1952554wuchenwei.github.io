@@ -15,12 +15,9 @@
 
 <body>
 <div id="container"></div>
-//<script type="text/javascript" src="https://1952554wuchenwei.github.io/map.html"></script>
-//<script>
-//        var a=UrlParam.paramValues("location");
-//</script>
 <script type="text/javascript">
     var sonUserId = window.parent.document.getElementById("userId").value;
+	window.alert( sonUserId);
     var map = new BMapGL.Map("container");
     // 创建地图实例
     var point = new BMapGL.Point(sonUserId.lon, sonUserId.lat);
