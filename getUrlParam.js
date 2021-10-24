@@ -1,5 +1,6 @@
 UrlParam = function() { // url参数 
-　　var data, index; 
+　　var data;
+    var index; 
 　　(function init() { 
 　　　　data = []; //值，如[["1","2"],["zhangsan"],["lisi"]] 
 　　　　index = {}; //键:索引，如{a:0,b:1,c:2} 
