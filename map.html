@@ -15,11 +15,15 @@
 
 <body>
 <div id="container"></div>
+<script>
+function fnChild (arg) {
+    alert(arg); 
+}
+</script>
 <script type="text/javascript">
-    var sonUserId = = $(parent.document.getElementById("parentID")).val(  )
     var map = new BMapGL.Map("container");
     // 创建地图实例
-    var point = new BMapGL.Point(sonUserId.lon, sonUserId.lat);
+    var point = new BMapGL.Point(arg.lon, arg.lat);
     // 创建点坐标
     map.centerAndZoom(point, 15);
     // 初始化地图，设置中心点坐标和地图级别
