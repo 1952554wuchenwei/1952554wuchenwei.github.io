@@ -22,7 +22,7 @@ function getUrlParam(name) {
     if (r != null) return unescape(r[2]);//返回参数值
     return null; 
 }
-    var arg=getUrlParam('location')
+    var arg = new getUrlParam('location')；
     var map = new BMapGL.Map("container");
     // 创建地图实例
     var point = new BMapGL.Point(arg[0], arg.[1]);
