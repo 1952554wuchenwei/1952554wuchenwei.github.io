@@ -15,12 +15,14 @@
 
 <body>
 <div id="container"></div>
-<script>
-function fnChild (arg) {
-    alert(arg); 
-}
-</script>
 <script type="text/javascript">
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg); //匹配目标参数
+    if (r != null) return unescape(r[2]);//返回参数值
+    return null; 
+}
+    var arg=getUrlParam('location')
     var map = new BMapGL.Map("container");
     // 创建地图实例
     var point = new BMapGL.Point(arg.lon, arg.lat);
