@@ -16,8 +16,7 @@
 <body>
 <div id="container"></div>
 <script type="text/javascript">
-    var sonUserId = window.parent.document.getElementById("userId").value;
-	window.alert( sonUserId);
+    var sonUserId = = $(parent.document.getElementById("parentID")).val(  )
     var map = new BMapGL.Map("container");
     // 创建地图实例
     var point = new BMapGL.Point(sonUserId.lon, sonUserId.lat);
