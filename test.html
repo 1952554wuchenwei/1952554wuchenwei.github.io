@@ -29,12 +29,12 @@
 <script type="text/javascript">
     var lon= new getUrlParam('lon');
     var lat= new getUrlParam('lat');
-    alert(lon)
-//    var map = new BMapGL.Map("container");
+
+    var map = new BMapGL.Map("container");
     // 创建地图实例
-//    var point = new BMapGL.Point(lon, lat);
+    var point = new BMapGL.Point(lon, lat);
     // 创建点坐标
-//    map.centerAndZoom(point, 15);
+    map.centerAndZoom(point, 15);
     // 初始化地图，设置中心点坐标和地图级别
 </script>
 </body>
