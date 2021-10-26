@@ -13,18 +13,26 @@
     </script>
 </head>
 
+
+<script>
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);//返回参数值
+        return null; 
+    }
+</script>
+
+
 <body>
 <div id="container"></div>
 <script type="text/javascript">
-
-    var reg = new RegExp("(^|&)" + "location" + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-    var r = window.location.search.substr(1).match(reg); //匹配目标参数
-    var arg = unescape(r[2]);//返回参数值
-
-    alert(arg);
+    var name = new getUrlParam('name');
+    var sex = new getUrlParam('sex');
+    
     var map = new BMapGL.Map("container");
     // 创建地图实例
-    var point = new BMapGL.Point(arg.loc, arg.lat);
+    var point = new BMapGL.Point(116, 39);
     // 创建点坐标
     map.centerAndZoom(point, 15);
     // 初始化地图，设置中心点坐标和地图级别
